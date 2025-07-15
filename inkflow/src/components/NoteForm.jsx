@@ -5,16 +5,14 @@ export default function NoteForm({ onClose, addNote }) {
     const [content, setContent] = useState("");
 
     const handleSave = () => {
-        if (!content.trim()) return; // prevents saving empty notes
-
+        if (!content.trim()) return; 
         const newNote = {
-            id: Date.now(), // unique id
+            id: Date.now(),
             title,
             content,
         };
-
-        addNote(newNote); // send note to App.jsx
-        onClose(); // close the form after saving
+        addNote(newNote); 
+        onClose();
     };
 
     return (
